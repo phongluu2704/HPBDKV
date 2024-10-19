@@ -62,22 +62,22 @@ let trackList = [
     {
         name: "Only Love",
         artist: " Trademark",
-        path: "only love.mp3",
+        path: "onlylove.mp4",
     },
     {
         name: "Dung Lam Trai Tim Anh Dau",
         artist: "Son Tung - MTP",
-        path: "dung lam trai tim anh dau.mp3",
+        path: "dunglamtraitimanhdau.mp4",
     },
     {
         name: "Yeu Nhieu Ghen Nhieu",
         artist: "Thanh Hung",
-        path: "yeu nhieu ghen nhieu.mp3",
+        path: "yeunhieughennhieu.mp4",
     },
     {
         name: "Beautiful And White",
         artist: "Shane Filan",
-        path: "beautiful and white.mp3",
+        path: "beautifulandwhite.mp4",
     },
 ];
 
