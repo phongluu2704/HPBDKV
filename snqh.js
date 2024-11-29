@@ -60,6 +60,11 @@ let soundBarsLottie = bodymovin.loadAnimation({
 
 let trackList = [
     {
+        name: "Happy birthday",
+        artist: "Lưu iu dấu",
+        path: "hpbdmusic.m4a",
+    },
+    {
         name: "Only Love",
         artist: " Trademark",
         path: "onlylove.mp4",
