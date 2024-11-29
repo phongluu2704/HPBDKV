@@ -61,7 +61,7 @@ let soundBarsLottie = bodymovin.loadAnimation({
 let trackList = [
     {
         name: "Happy birthday",
-        artist: "Lưu iu dấu",
+        artist: "Hương iu dấu",
         path: "hpbdmusic.m4a",
     },
     {
