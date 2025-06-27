@@ -1,205 +1,157 @@
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.3/lottie_svg.min.js"></script>
-    <title>Happy Birthday</title>
-    <link rel="icon" href="tab-icon.png"/>
-    <link rel="stylesheet" href="snqh.css">
-</head>
-<body style="font-family: 'Comic Neue';" class="relative">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="hpbd.css" />
 
-    <div id="passwordPrompt" class="absolute top-0 flex items-center justify-center w-full h-full bg-gray-800 bg-opacity-50 z-20">
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+			integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<title>Happy birthday</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="boxcontainer">
+				<div class="image">
+					<img src="flag.png" alt="" />
+				</div>
+				<div class="text-happybirthday">
+					<img src="texthappy.png" alt="" />
+				</div>
+				<div class="cake">
+					<img src="cake.png" alt="" />
+				</div>
+				<div class="box-balloon">
+					<div class="balloon-item1">
+						<img src="balloon.png" alt="" />
+					</div>
+					<div class="balloon-item1">
+						<img src="balloon.png" alt="" />
+					</div>
+				</div>
+				<div class="box-cloud">
+					<div class="cloud">
+						<img src="cloud.png" alt="" />
+					</div>
+					<div class="cloud">
+						<img src="cloud.png" alt="" />
+					</div>
+				</div>
+				<div class="box-firework">
+					<div class="firework">
+						<img src="firework.png" alt="" />
+						<img src="firework1.png" alt="" id="firework1" />
+					</div>
+					<div class="firework">
+						<img src="firework.png" alt="" />
+						<img src="firework1.png" alt="" id="firework1" />
+					</div>
+				</div>
+				<div class="paperCannons">
+					<img src="paperCannons1.png" alt="" />
+				</div>
+				<div class="box-giftbox">
+					<img src="giftbox.png" alt="" />
+					<img src="giftbox.png" alt="" />
+					<img src="giftbox.png" alt="" />
+					<img src="giftbox.png" alt="" />
+					<img src="giftbox.png" alt="" />
+					<img src="giftbox.png" alt="" />
+				</div>
+				<div class="mail">
+					<i class="fa-regular fa-envelope"></i>
+				</div>
+				<div class="boxcute">
+					<div class="cute1">
+						<img src="cute.png" alt="" />
+					</div>
+					<div class="cute2">
+						<img src="cute.png" alt="" />
+					</div>
+				</div>
+			</div>
+			<div class="boxMail">
+				<i class="fa-solid fa-xmark"></i>
+				<div class="boxMail-container">
+					<div class="card1">
+						<div class="userImg">
+							<img src="Picture3.jpg" alt="" />
+						</div>
+						<h3>Happy birthday</h3>
+						<div class="imageCute">
+							<img src="cute1.png" alt="" />
+						</div>
+					</div>
+					<div class="card2">
+						<div class="card2-content">
+							<h3>Gửi em</h3>
+							<h2>
+								Chúc cậu một sinh nhật thật vui vẻ và ấm áp nhé!
+								Chúc em hôm nay sẽ là một ngày tràn đầy tiếng cười, những điều bất ngờ dễ thương và thật nhiều kỷ niệm đáng nhớ. Học giỏi xinh đẹp. Trời mưa cũng đi tập gym nhaaaaa
+							</h2>
+							<div class="imageCute2">
+								<img src="cute2.png" alt="" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		document.addEventListener('mousemove', function (e) {
+			let body = document.querySelector('body');
+			let heart = document.createElement('span');
+			let x = e.offsetX;
+			let y = e.offsetY;
+			heart.style.left = x + 'px';
+			heart.style.top = y + 'px';
 
-        <div class="bg-pink-200 p-5 rounded-md shadow-md text-center border-4 border-pink-500">
-            <h2 class="mb-4 text-xl font-bold text-pink-700">✨ Nhập Password ✨</h2>
-            <input type="password" id="passwordInput" class="border-2 border-pink-400 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-pink-600" placeholder="Password" />
-            <button id="submitPassword" class="ml-2 bg-pink-500 text-white p-2 rounded-md hover:bg-pink-600 transition">Dạ</button>
-            <p id="errorMessage" class="text-red-500 mt-2 hidden">❌ Incorrect password!</p>
-        </div>
-    </div>
+			let size = Math.random() * 10;
+			heart.style.width = 4 * size + 'px';
+			heart.style.height = 4 * size + 'px';
 
-    <div class="fixed left-6 bottom-6 z-10">
-        <div class="music-container relative bg-neutral-100 py-3 px-3 border-2 z-10 rounded-md border-black flex items-center">
-            <div class="toggle-player bg-neutral-100 border-2 border-black">
-                <img class="w-full" src="close.svg" alt="">
-            </div>
-            <div class="avatar absolute w-14">
-                <img class="w-full border-2 bg-white border-black rounded-md" src="pinkheart.svg" alt="">
-            </div>
-            <div class="player">
-                <div class="sound-bars-lottie">
-                    <div class="sound-bars"></div>
-                </div>
-                <div class="track-info -space-y-1">
-                    <div class="trackname">Only</div>
-                    <div class="trackartist">Track Artist</div>
-                </div>
-                <div class="track-nav">
-                    <div class="prev-track">
-                        <img class="w-7" src="backplayer.svg" alt="">
-                    </div>
-                    <div class="playpause-track">
-                        <img class="w-8" src="play.svg" alt="">
-                    </div>
-                    <div class="next-track">
-                        <img class="w-7" style="transform: rotate(180deg);" src="backplayer.svg" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+			let transformValue = Math.random() * 360;
+			heart.style.transform = 'rotate(' + transformValue + 'deg)';
 
-    <div class="background">
-        <div class="one">
-            <img src="back.jpg" alt="">
-            <div class="container">
-                <div class="envelope-wrapper">
-                    <div class="envelope">
-                        <div class="letter">
-                            <div class="text">
-                                <strong style="font-size: .89rem;">Dear Dinh Thi Quynh Huong </strong>
-                                <p style="text-indent: 15px;">
-                                    Chúc chị ngày một sinh nhật tràn ngập niềm vui và hạnh phúc!. Chúc chị luôn tự tin, luôn mỉm cười và sống hết mình với những ước mơ. Hy vọng rằng chị sẽ nhận được nhiều yêu thương và sự trân trọng từ mọi người xung quanh. Chị luôn là một người đặc biệt đối với em.Em sẽ luôn ở cạnh chị cho đến lúc em không còn gì nữa. Anh iu Em ❤️
-                                </p>
-                                <p class="love">I LOVE YOU SO MUCH</p>
-                                <div class="pana">
-                                    <img src="heartarrow.svg" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="heart"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="w-full h-[100vh] z-0 relative">
-        
-        <img class="w-full h-full object-cover" src="back.jpg" alt="">
-        
-        <div class="absolute top-0 h-full flex items-center justify-center flex-col w-full">
-            <div id="window" class="bg-neutral-100 relative shadow-md hover:shadow-xl duration-150 hover:scale-105 rounded-md w-[34rem] flex justify-center flex-col border-2 border-black">
-                <div id="gif" class="absolute -top-20 -left-60">
-                    <img class="w-full -rotate-12" src="memeo.gif" alt="">
-                </div>
-                <div id="gif" class="absolute -bottom-20 -left-60">
-                    <img class="w-full rotate-12" src="memeo4.gif" alt="">
-                </div>
-                <div id="gif" class="absolute -top-20 -right-60">
-                    <img class="w-full rotate-3" src="memeo2.gif" alt="">
-                </div>
-                <div id="gif" class="absolute -bottom-20 -right-60">
-                    <img class="w-full -rotate-12" src="memeo3.gif" alt="">
-                </div>
-                <div class="flex items-center px-1 py-1 justify-between w-full border-b-2 border-black">
-                    <div>
-                        <img class="w-5" src="back.svg" alt="">
-                    </div>
-                    <div>
-                        <h1 class="font-extrabold text-lg">Quỳnh Hương Cute</h1>
-                    </div>
-                    <div>
-                        <img class="w-6" src="x.svg">
-                    </div>
-                </div>
-                <div class="relative border-b-2 border-black">
-                    <div class="absolute bottom-2 left-12 w-14">
-                        <img class="rotate-12 w-full" src="fingerheart.png" alt="">
-                    </div>
-                    <div class="absolute top-3 right-3 w-12">
-                        <img class="rotate-12 w-full" src="dog.svg" alt="">
-                    </div>
-                    <div class="absolute bottom-2 right-14 w-11">
-                        <img class="-rotate-12 w-full" src="herheart.svg" alt="">
-                    </div>
-                    <div class="absolute top-3 left-3 w-10">
-                        <img class="-rotate-12 w-full" src="herbleh.svg" alt="">
-                    </div>
-                    <div class="text-center py-5">
-                        <h1 class="font-extrabold text-5xl">About Quynh Huong</h1>
-                        <p class="text-base">Cutie Pie/Sweetheart/Honeybee</p>
-                    </div>
-                </div>
-                
-                <div class="flex justify-center">
-                    <div class="w-44 flex justify-center py-5 gap-3">
-                        <img class="w-40" src="beiutocngan.jpg" alt="">
-                        <img class="w-40" src="qhdangiu.JPG" alt="">
-                        <img class="w-40" src="qhmylove.jpg" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>  
-    </div>
-    <div class="w-full h-[100vh] z-0 relative">
-        
-        <img class="w-full h-full object-cover" src="back.jpg" alt="">
-        <div class="absolute top-0 w-full h-full flex justify-center items-center">
-            
-            <div class="flex bg-neutral-100 gap-5 relative border-2 z-10 border-black flex-col px-5 pb-3 shadow-md pt-9 rounded-md">
-                
-                <div class="absolute top-1 right-1 w-7">
-                    <img class="w-full" src="heart.svg" alt="">
-                </div>
-                <div class="absolute -top-20 -left-56 w-44">
-                    <img class="w-full -rotate-6" src="https://media.tenor.com/dg7Th23TzFUAAAAi/cat_-vodk.gif" alt="">
-                </div>
-                <div class="absolute -bottom-3 -right-52 w-44">
-                    <img class="w-full" src="https://media.tenor.com/LrSL7XDKVbgAAAAi/peachcat-cat.gif" alt="">
-                </div>
-                <div class="absolute top-[-8rem] z-0 right-28 w-36">
-                    <img class="w-full" src="https://media.tenor.com/A5VhCveZ_ygAAAAi/peach-and-goma-peach-goma.gif" alt="">
-                </div>
-                <div class="absolute -bottom-48 z-0 left-16 w-40">
-                    <img class="w-full" src="https://media.tenor.com/ewJrc9fZeaQAAAAi/prots-masaj.gif" alt="">
-                </div>
-                <div class="flex gap-5" id="myCountdown">
-                    <div class="bg-transparent border-2 border-black rounded-md w-40 h-52 flex justify-center items-center flex-col gap-10">
-                        <h1 id="years" class="text-6xl font-bold">0</h1>
-                        <p class="font-bold text-xl text-red-700">Years</p>
-                    </div>
-                    <div class="bg-transparent border-2 border-black rounded-md w-40 h-52 flex justify-center items-center flex-col gap-10">
-                        <h1 id="months" class="text-6xl font-bold">0</h1>
-                        <p class="font-bold text-xl text-red-700">Months</p>
-                    </div>
-                    <div class="bg-transparent border-2 border-black rounded-md w-40 h-52 flex justify-center items-center flex-col gap-10">
-                        <h1 id="days" class="text-6xl font-bold">0</h1>
-                        <p class="font-bold text-xl text-red-700">Days</p>
-                    </div>
-                 
-                </div>
-                <h1 class="text-center font-bold text-base">Since December 06, 2003</h1>
-            </div>
+			body.appendChild(heart);
 
+			setTimeout(function () {
+				heart.remove();
+			}, 1000);
+		});
 
-        </div>
-    </div>
-    <script>
-        const envelope = document.querySelector('.envelope-wrapper');
-        envelope.addEventListener('click', () => {
-            envelope.classList.toggle('flap');
-            envelope.classList.toggle('open');
-        });
-    </script>
-    <script>
-        document.getElementById("submitPassword").addEventListener("click", function() {
-            var password = document.getElementById("passwordInput").value;
-            var errorMessage = document.getElementById("errorMessage");
-            if (password === "06122003") {
-                document.getElementById("passwordPrompt").style.display = "none";
-            } else {
-                errorMessage.classList.remove("hidden");
-            }
-        });
-    </script>
+		let mailBox = document.querySelector('.mail');
+		let boxmail = document.querySelector('.boxMail');
+		var close = document.querySelector('.fa-xmark');
+		mailBox.onclick = function () {
+			mailBox.classList.toggle('active');
+			boxmail.classList.add('active');
+		};
 
-    <script src="snqh.js"></script> 
-</body>
+		close.addEventListener('click', function () {
+			boxmail.classList.remove('active');
+		});
+	</script>
+	
+	<audio id="bgMusic" loop>
+		<source src="hpbd.mp4" type="audio/mpeg" />
+	</audio>
+	<script>
+		window.addEventListener('click', function () {
+			const music = document.getElementById('bgMusic');
+			if (music.paused) {
+				music.play().catch(e => {
+					console.log('Trình duyệt chặn autoplay:', e);
+				});
+			}
+	</script>
+
 </html>
